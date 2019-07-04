@@ -3,23 +3,25 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>OBJ，DLL，LIB，EXE之间的关系 | LAZY&#39;s BLOG</title>
+  <title>Carole&amp;Tuesday | LAZY&#39;s BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
+  <meta name="keywords" content="剪影">
   
   
   
-  <meta name="description" content="OBJ是中间代码文件、LIB是静态库文件、DLL是动态库文件、EXE是可执行文件。 对于静态库文件，链接的时候把其中需要的东西抽取出来嵌入到EXE中，EXE较大。 对于动态库文件，EXE执行的时候依赖于DLL提供的功能，没有DLL则EXE无法执行，EXE较小。 一个C或CPP文件被编译后既是一个OBJ，当所有必须要的C或CPP都被编译成OBJ后再统一链接成EXE。 LIB或DLL可以被看成是一堆">
+  
+  <meta name="keywords" content="剪影">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OBJ，DLL，LIB，EXE之间的关系">
-<meta property="og:url" content="http://yoursite.com/2019/07/04/OBJ，DLL，LIB，EXE之间的关系/index.html">
+<meta property="og:title" content="Carole&amp;Tuesday">
+<meta property="og:url" content="http://yoursite.com/2019/07/04/Carole-Tuesday/index.html">
 <meta property="og:site_name" content="LAZY&#39;s BLOG">
-<meta property="og:description" content="OBJ是中间代码文件、LIB是静态库文件、DLL是动态库文件、EXE是可执行文件。 对于静态库文件，链接的时候把其中需要的东西抽取出来嵌入到EXE中，EXE较大。 对于动态库文件，EXE执行的时候依赖于DLL提供的功能，没有DLL则EXE无法执行，EXE较小。 一个C或CPP文件被编译后既是一个OBJ，当所有必须要的C或CPP都被编译成OBJ后再统一链接成EXE。 LIB或DLL可以被看成是一堆">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-04T01:34:08.114Z">
+<meta property="og:image" content="http://yoursite.com/2019/07/04/Carole-Tuesday/Carole&Tuesday.jpg">
+<meta property="og:updated_time" content="2019-07-04T09:18:01.736Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OBJ，DLL，LIB，EXE之间的关系">
-<meta name="twitter:description" content="OBJ是中间代码文件、LIB是静态库文件、DLL是动态库文件、EXE是可执行文件。 对于静态库文件，链接的时候把其中需要的东西抽取出来嵌入到EXE中，EXE较大。 对于动态库文件，EXE执行的时候依赖于DLL提供的功能，没有DLL则EXE无法执行，EXE较小。 一个C或CPP文件被编译后既是一个OBJ，当所有必须要的C或CPP都被编译成OBJ后再统一链接成EXE。 LIB或DLL可以被看成是一堆">
+<meta name="twitter:title" content="Carole&amp;Tuesday">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/04/Carole-Tuesday/Carole&Tuesday.jpg">
   
     <link rel="alternate" href="/atom.xml" title="LAZY&#39;s BLOG" type="application/atom+xml">
   
@@ -101,7 +103,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-OBJ，DLL，LIB，EXE之间的关系" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost">
+          <section id="main" style="float:none;"><article id="post-Carole-Tuesday" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -109,7 +111,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      OBJ，DLL，LIB，EXE之间的关系
+      Carole&amp;Tuesday
     </h1>
   
 
@@ -117,8 +119,8 @@
     
     <div class="article-meta">
       
-	<a href="/2019/07/04/OBJ，DLL，LIB，EXE之间的关系/" class="article-date">
-	  <time datetime="2019-07-04T01:33:01.000Z" itemprop="datePublished">July 4, 2019</time>
+	<a href="/2019/07/04/Carole-Tuesday/" class="article-date">
+	  <time datetime="2019-07-04T08:59:00.000Z" itemprop="datePublished">July 4, 2019</time>
 	</a>
 
        
@@ -130,22 +132,16 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
-<li>OBJ是中间代码文件、LIB是静态库文件、DLL是动态库文件、EXE是可执行文件。</li>
-<li>对于静态库文件，链接的时候把其中需要的东西抽取出来嵌入到EXE中，EXE较大。</li>
-<li>对于动态库文件，EXE执行的时候依赖于DLL提供的功能，没有DLL则EXE无法执行，EXE较小。</li>
-<li>一个C或CPP文件被编译后既是一个OBJ，当所有必须要的C或CPP都被编译成OBJ后再统一链接成EXE。</li>
-<li>LIB或DLL可以被看成是一堆OBJ的组合，发布后可以被链接入其它EXE或被其它EXE调用。</li>
-<li>LIB不可以调用其它LIB或DLL，DLL可以调用其它LIB或DLL。</li>
-<li>动态库有LIB文件和DLL文件。LIB文件必须在编译期就被链接到应用程序中，而DLL在运行期才会被调用。如果有DLL文件，则对应的LIB文件一般是一些索引信息，具体的实现在DLL文件中。如果只有LIB文件，那么这个LIB文件是静态库文件，索引和实现都在其中。静态库文件有好处，给用户安装时就不需要再挂动态库了；但也有缺点，即导致EXE较大且失去了动态库的灵活性，在版本升级时，同时要发布新的EXE才行。</li>
-<li>在动态库的情况下，有两个文件，一个是LIB文件、一个是DLL文件，LIB文件包含被DLL导出的函数的名称和位置，DLL包含实际的函数和数据，应用程序使用LIB文件链接到所需要使用的DLL文件，库中的函数和数据并不复制到可执行文件中，因此在EXE文件中存放的不是被调用的函数代码，而是DLL中所要调用的函数的内存地址，这样当一个或多个应用程序运行时再把程序代码和被调用的函数代码链接起来，从而节省了内存资源。</li>
-</ol>
+        <p><img src="//yoursite.com/2019/07/04/Carole-Tuesday/Carole&Tuesday.jpg" alt="Carole&amp;Tuesday"></p>
 
       
     </div>
     <footer class="entry-meta entry-footer">
       
       
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/剪影/">剪影</a></li></ul>
+
       
         
 	<div id="comment">
@@ -179,19 +175,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/07/04/Carole-Tuesday/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Carole&amp;Tuesday
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/07/03/如何hexo-admin上传文章/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/07/04/OBJ，DLL，LIB，EXE之间的关系/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">如何hexo admin上传文章</div>
+      <div class="article-nav-title">OBJ，DLL，LIB，EXE之间的关系</div>
     </a>
   
 </nav>

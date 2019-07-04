@@ -99,6 +99,57 @@
         
           <section id="main">
   
+    <article id="post-OBJ，DLL，LIB，EXE之间的关系" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/07/04/OBJ，DLL，LIB，EXE之间的关系/">OBJ，DLL，LIB，EXE之间的关系</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/07/04/OBJ，DLL，LIB，EXE之间的关系/" class="article-date">
+	  <time datetime="2019-07-04T01:33:01.000Z" itemprop="datePublished">July 4, 2019</time>
+	</a>
+
+       
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>OBJ是中间代码文件、LIB是静态库文件、DLL是动态库文件、EXE是可执行文件。</li>
+<li>对于静态库文件，链接的时候把其中需要的东西抽取出来嵌入到EXE中，EXE较大。</li>
+<li>对于动态库文件，EXE执行的时候依赖于DLL提供的功能，没有DLL则EXE无法执行，EXE较小。</li>
+<li>一个C或CPP文件被编译后既是一个OBJ，当所有必须要的C或CPP都被编译成OBJ后再统一链接成EXE。</li>
+<li>LIB或DLL可以被看成是一堆OBJ的组合，发布后可以被链接入其它EXE或被其它EXE调用。</li>
+<li>LIB不可以调用其它LIB或DLL，DLL可以调用其它LIB或DLL。</li>
+<li>动态库有LIB文件和DLL文件。LIB文件必须在编译期就被链接到应用程序中，而DLL在运行期才会被调用。如果有DLL文件，则对应的LIB文件一般是一些索引信息，具体的实现在DLL文件中。如果只有LIB文件，那么这个LIB文件是静态库文件，索引和实现都在其中。静态库文件有好处，给用户安装时就不需要再挂动态库了；但也有缺点，即导致EXE较大且失去了动态库的灵活性，在版本升级时，同时要发布新的EXE才行。</li>
+<li>在动态库的情况下，有两个文件，一个是LIB文件、一个是DLL文件，LIB文件包含被DLL导出的函数的名称和位置，DLL包含实际的函数和数据，应用程序使用LIB文件链接到所需要使用的DLL文件，库中的函数和数据并不复制到可执行文件中，因此在EXE文件中存放的不是被调用的函数代码，而是DLL中所要调用的函数的内存地址，这样当一个或多个应用程序运行时再把程序代码和被调用的函数代码链接起来，从而节省了内存资源。</li>
+</ol>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-如何hexo-admin上传文章" class="article article-type-post" itemscope itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -690,6 +741,18 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2019/07/04/OBJ，DLL，LIB，EXE之间的关系/">OBJ，DLL，LIB，EXE之间的关系</a></h6>
+              <span>July 4, 2019</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2019/07/03/如何hexo-admin上传文章/">如何hexo admin上传文章</a></h6>
               <span>July 3, 2019</span>
             </div>
@@ -744,18 +807,6 @@
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/06/11/北极/">北极</a></h6>
-              <span>June 11, 2019</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -788,7 +839,7 @@
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">5</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">5</span></li></ul>
     </div>
   </div>
 

@@ -99,7 +99,7 @@
         
           <section id="main">
   
-    <article id="post-ython列表，字典和元组" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post--类中this的用法" class="article article-type-post" itemscope itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -107,7 +107,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/07/09/ython列表，字典和元组/">python列表，字典和元组</a>
+      <a class="article-title" href="/2019/07/09/-类中this的用法/">C#类中this的用法</a>
     </h1>
   
 
@@ -115,7 +115,59 @@
     
     <div class="article-meta">
       
-	<a href="/2019/07/09/ython列表，字典和元组/" class="article-date">
+	<a href="/2019/07/09/-类中this的用法/" class="article-date">
+	  <time datetime="2019-07-09T09:30:35.000Z" itemprop="datePublished">July 9, 2019</time>
+	</a>
+
+       
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在类中this主要有两种用法，this表示在类中调用成员函数或者成员变量的类对象，为了区分调用成员函数还是成员变量，需要用到this，比如建一个Person的类，含成员变量 name，age，address；含成员函数talk();<br></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123;</span><br><span class="line">    String name;</span><br><span class="line">    int age ;</span><br><span class="line">    String address；</span><br><span class="line">void talk(String name)&#123;</span><br><span class="line">     System.out.println(&quot;my name is &quot;+this.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>创建一个类对象并调用成员函数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Person p1=new Person();</span><br><span class="line">p1.name=&quot;zhangsan&quot;</span><br><span class="line">p1.talk(&quot;lisi&quot;);</span><br></pre></td></tr></table></figure>
+
+<p>此时给name赋了两个值，一个给成员变量赋值zhangsan，一个是给成员函数的参数赋值lisi，这里就考虑成员函数输出中调用的是成员变量还是成员函数的参数，在使用this的情况下，结果为<br><code>my name is zhangsan</code><br>可以看到这里调用的是成员变量，而不带this的情况下，结果为<code>my name is lisi</code><br>可以看到这里调用的是成员函数的参数，因此使用this可以区分调用类成员变量和类成员函数中的参数，this代表调用成员函数的对象。</p>
+<p>this的另一种用法是在类内的一个构造函数中调用类内的另一个构造函数，比如类内有两个构造函数一个带有两个参数一个带有三个参数，可以在带有三个参数的构造函数里调用带有两个参数的构造函数，以实现对部分成员变量的赋值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Person(String name , int age)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">Person(String name,int age,String address)&#123;</span><br><span class="line">    this.Person(name，age)；</span><br><span class="line">    this.age=age；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里在构造函数里的参数name，age，address与成员变量重名，由this的第一个用法可以知道，使用this.name可以表示调用类的成员变量，因此在带有三个参数的构造函数中的this.age=age表示把构造函数参数的值赋值给类的成员变量，若要在带有三个参数的构造函数中使用其中两个参数给成员变量赋值，这样可以也仅可在第一行调用含有两个参数的构造函数来减少重复赋值。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-thon列表，字典和元组" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/07/09/thon列表，字典和元组/">python列表，字典和元组</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/07/09/thon列表，字典和元组/" class="article-date">
 	  <time datetime="2019-07-09T05:53:00.000Z" itemprop="datePublished">July 9, 2019</time>
 	</a>
 
@@ -563,58 +615,6 @@
 <!-- Table of Contents -->
 
   
-    <article id="post-路边的鼓掌者" class="article article-type-post" itemscope itemprop="blogPost">
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/06/11/路边的鼓掌者/">路边的鼓掌者</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2019/06/11/路边的鼓掌者/" class="article-date">
-	  <time datetime="2019-06-11T15:43:00.000Z" itemprop="datePublished">June 11, 2019</time>
-	</a>
-
-       
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  不知过了多久，才发现自己出神。望着讲桌前的你，正做着期末演讲。你微笑着，棕色的瞳仁闪着睿智的光。讲台下，每个人仰着头，专注的听着，教室里的氛围，温暖而美好。</p>
-<p>  我坐在那，望着你，发现你原本青涩的脸庞已略显成熟，身体消瘦，却仿佛藏着巨大的能量。一瞬，三年，我们终于走到高中的尽头。老板组织的这次演讲，也正是为了最后让大家聚聚，而作为第一的你，不出意料的被选中。而我，只是在台下默默地做一个听众。你话音刚落，教室里变响起雷鸣般的掌声，我抬起冻僵的双手，为你鼓掌，尽管掌声淹没在潮水之中，尽管手掌拍得生疼，我依旧鼓着。因为，由衷地，我欣赏你。</p>
-<p>  无疑，你是成功者，实至名归的成功者。而我见证了你成功背后的艰辛。我曾见你在无人的教室奋笔疾书，曾见你在花开的树下颂者精美的文字，曾见你在宁静的湖边编织华美的篇章。而我，只是在听课时无缘无故的走神，在慵懒的下午描绘秋日的风景，在静谧的夜晚听着歌雕琢时光。所以，我总认为，人生的道路上，你奔跑着，我只是站在路边，鼓着掌，与你擦身而过。</p>
-<p>   我曾问你，毕业后想上什么大学，你浅浅一笑，说想去北方。我突然有一种想追随你的冲动，就像萤火虫向着明星一般。可是，我知道，无论我如何努力的追赶，与你都是咫尺天涯，无法企及。为何不在你的生命里只做一个鼓掌者呢？之后，我变了，不再浪费光阴在无用的事上，不再关心周围的纷繁世事，不再艳羡他人的耀眼光环。只是静下心来，全身心投入，做一个让自己满意的自己。</p>
-<p>  曾经，我是一个仰望着，在你那墨夜的星辰下，驻足欣赏。不过，在茫茫黑夜中，我学会匍匐前行。在与你相反的方向，为你鼓掌。而今天，我坐在这，望着你，不觉时光早已为我们的人生描绘出不同的轨迹。身份的不同，让你我选择了不同的道路。现在的我，才发现。即便站在路边鼓掌，也是青春中的一份明媚的幸福啊！</p>
-<p>  最终，你北上，我南下。</p>
-<p>  最终，“你我相逢在黑夜的海上，你有你的，我有我的方向，你记得也好，最好你忘掉，这交会时互放的光亮。”</p>
-<p>  最终，我还是站在夏意阑珊的街头，望着你渐行渐远的身影，回想起高考前的最后一次演讲，仍然情不自禁地为你鼓掌。然后，转身，朝着自己的方向，独自前行。</p>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
 
 
   <nav id="page-nav">
@@ -725,7 +725,19 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/07/09/ython列表，字典和元组/">python列表，字典和元组</a></h6>
+              <h6 style="margin: 0;"><a href="/2019/07/09/-类中this的用法/">C#类中this的用法</a></h6>
+              <span>July 9, 2019</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2019/07/09/thon列表，字典和元组/">python列表，字典和元组</a></h6>
               <span>July 9, 2019</span>
             </div>
 
@@ -779,18 +791,6 @@
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/07/03/如何hexo-admin上传文章/">如何hexo admin上传文章</a></h6>
-              <span>July 3, 2019</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -823,7 +823,7 @@
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">5</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">5</span></li></ul>
     </div>
   </div>
 

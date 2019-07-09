@@ -3,7 +3,7 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>python os.walk的用法 | LAZY&#39;s BLOG</title>
+  <title>python列表，字典和元组 | LAZY&#39;s BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="keywords" content="编程总结">
@@ -11,18 +11,18 @@
   
   
   
-  <meta name="description" content="概述os.walk() 方法用于通过在目录树中游走输出在目录中的文件名，向上或者向下。os.walk() 方法是一个简单易用的文件、目录遍历器，可以帮助我们高效的处理文件、目录方面的事情。在Unix，Windows中有效。语法walk()方法语法格式如下：os.walk(top[, topdown=True[, onerror=None[, followlinks=False]]])参数top –">
+  <meta name="description" content="python语言最常见的括号有三种，分别是：小括号( )、中括号[ ]和大括号也叫做花括号{ }，分别用来代表不同的python基本内置数据类型。 1、python中的小括号( )：代表tuple元组数据类型，元组是一种不可变序列。 123&amp;gt;&amp;gt;&amp;gt; tup = (1,2,3)    &amp;gt;&amp;gt;&amp;gt; tup    (1, 2, 3)  2、python中的中括号[ ]，代表">
 <meta name="keywords" content="编程总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python os.walk的用法">
-<meta property="og:url" content="http://yoursite.com/2019/07/09/ython-os-walk的用法/index.html">
+<meta property="og:title" content="python列表，字典和元组">
+<meta property="og:url" content="http://yoursite.com/2019/07/09/thon列表，字典和元组/index.html">
 <meta property="og:site_name" content="LAZY&#39;s BLOG">
-<meta property="og:description" content="概述os.walk() 方法用于通过在目录树中游走输出在目录中的文件名，向上或者向下。os.walk() 方法是一个简单易用的文件、目录遍历器，可以帮助我们高效的处理文件、目录方面的事情。在Unix，Windows中有效。语法walk()方法语法格式如下：os.walk(top[, topdown=True[, onerror=None[, followlinks=False]]])参数top –">
+<meta property="og:description" content="python语言最常见的括号有三种，分别是：小括号( )、中括号[ ]和大括号也叫做花括号{ }，分别用来代表不同的python基本内置数据类型。 1、python中的小括号( )：代表tuple元组数据类型，元组是一种不可变序列。 123&amp;gt;&amp;gt;&amp;gt; tup = (1,2,3)    &amp;gt;&amp;gt;&amp;gt; tup    (1, 2, 3)  2、python中的中括号[ ]，代表">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-09T02:23:54.934Z">
+<meta property="og:updated_time" content="2019-07-09T05:58:55.033Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python os.walk的用法">
-<meta name="twitter:description" content="概述os.walk() 方法用于通过在目录树中游走输出在目录中的文件名，向上或者向下。os.walk() 方法是一个简单易用的文件、目录遍历器，可以帮助我们高效的处理文件、目录方面的事情。在Unix，Windows中有效。语法walk()方法语法格式如下：os.walk(top[, topdown=True[, onerror=None[, followlinks=False]]])参数top –">
+<meta name="twitter:title" content="python列表，字典和元组">
+<meta name="twitter:description" content="python语言最常见的括号有三种，分别是：小括号( )、中括号[ ]和大括号也叫做花括号{ }，分别用来代表不同的python基本内置数据类型。 1、python中的小括号( )：代表tuple元组数据类型，元组是一种不可变序列。 123&amp;gt;&amp;gt;&amp;gt; tup = (1,2,3)    &amp;gt;&amp;gt;&amp;gt; tup    (1, 2, 3)  2、python中的中括号[ ]，代表">
   
     <link rel="alternate" href="/atom.xml" title="LAZY&#39;s BLOG" type="application/atom+xml">
   
@@ -104,7 +104,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-ython-os-walk的用法" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost">
+          <section id="main" style="float:none;"><article id="post-thon列表，字典和元组" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -112,7 +112,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      python os.walk的用法
+      python列表，字典和元组
     </h1>
   
 
@@ -120,8 +120,8 @@
     
     <div class="article-meta">
       
-	<a href="/2019/07/09/ython-os-walk的用法/" class="article-date">
-	  <time datetime="2019-07-09T02:01:00.000Z" itemprop="datePublished">July 9, 2019</time>
+	<a href="/2019/07/09/thon列表，字典和元组/" class="article-date">
+	  <time datetime="2019-07-09T05:53:00.000Z" itemprop="datePublished">July 9, 2019</time>
 	</a>
 
        
@@ -133,11 +133,15 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p><b>概述</b><br><br>os.walk() 方法用于通过在目录树中游走输出在目录中的文件名，向上或者向下。<br><br>os.walk() 方法是一个简单易用的文件、目录遍历器，可以帮助我们高效的处理文件、目录方面的事情。<br><br>在Unix，Windows中有效。<br><br><b>语法</b><br><br>walk()方法语法格式如下：<br><br>os.walk(top[, topdown=True[, onerror=None[, followlinks=False]]])<br><br><b>参数</b><br><br>top – 是你所要遍历的目录的地址, 返回的是一个三元组(root,dirs,files)。<br><br>root 所指的是当前正在遍历的这个文件夹的本身的地址<br><br>dirs 是一个 list ，内容是该文件夹中所有的目录的名字(不包括子目录)<br><br>files 同样是 list , 内容是该文件夹中所有的文件(不包括子目录)<br><br>topdown –可选，为 True，则优先遍历 top 目录，否则优先遍历 top 的子目录(默认为开启)。如果 topdown 参数为 True，walk 会遍历top文件夹，与top 文件夹中每一个子目录。<br><br>onerror – 可选，需要一个 callable 对象，当 walk 需要异常时，会调用。<br><br>followlinks – 可选，如果为 True，则会遍历目录下的快捷方式(linux 下是软连接 symbolic link )实际所指的目录(默认关闭)，如果为 False，则优先遍历 top 的子目录。<br><br><b>返回值</b><br><br>该方法没有返回值。<br><br><b>实例</b><br><br>以下实例演示了 walk() 方法的使用：<br></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python</span><br><span class="line"># -*- coding: UTF-8 -*-</span><br><span class="line"></span><br><span class="line">import os</span><br><span class="line">for root, dirs, files in os.walk(&quot;.&quot;, topdown=False):</span><br><span class="line">    for name in files:</span><br><span class="line">        print(os.path.join(root, name))</span><br><span class="line">    for name in dirs:</span><br><span class="line">        print(os.path.join(root, name))</span><br></pre></td></tr></table></figure>
+        <p>python语言最常见的括号有三种，分别是：小括号( )、中括号[ ]和大括号也叫做花括号{ }，分别用来代表不同的python基本内置数据类型。</p>
+<p>1、python中的小括号( )：代表tuple元组数据类型，元组是一种不可变序列。<br></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; tup = (1,2,3)    </span><br><span class="line">&gt;&gt;&gt; tup    </span><br><span class="line">(1, 2, 3)</span><br></pre></td></tr></table></figure>
 
-<p>执行以上程序输出结果为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">./.bash_logout</span><br><span class="line">./amrood.tar.gz</span><br><span class="line">./.emacs</span><br><span class="line">./httpd.conf</span><br><span class="line">./www.tar.gz</span><br><span class="line">./mysql.tar.gz</span><br><span class="line">./test.py</span><br><span class="line">./.bashrc</span><br><span class="line">./.bash_history</span><br><span class="line">./.bash_profile</span><br><span class="line">./tmp</span><br><span class="line">./tmp/test.py</span><br></pre></td></tr></table></figure>
+<p>2、python中的中括号[ ]，代表list列表数据类型：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; list(&apos;python&apos;)    </span><br><span class="line">[&apos;p&apos;, &apos;y&apos;, &apos;t&apos;, &apos;h&apos;, &apos;o&apos;, &apos;n&apos;]</span><br></pre></td></tr></table></figure>
+
+<p>3、python大括号{ }花括号：代表dict字典数据类型，字典是由键对值组组成。冒号’:’分开键和值，逗号’,’隔开组。用大括号创建的方法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; dic=&#123;&apos;jon&apos;:&apos;boy&apos;,&apos;lili&apos;:&apos;girl&apos;&#125;    </span><br><span class="line">&gt;&gt;&gt; dic    </span><br><span class="line">&#123;&apos;lili&apos;: &apos;girl&apos;, &apos;jon&apos;: &apos;boy&apos;&#125;    </span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -179,19 +183,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/07/09/thon列表，字典和元组/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/07/09/-类中this的用法/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          python列表，字典和元组
+          C#类中this的用法
         
       </div>
     </a>
   
   
-    <a href="/2019/07/08/ListView-QListWidget的区别/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/07/09/ython-os-walk的用法/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">QListView&amp;QListWidget的区别</div>
+      <div class="article-nav-title">python os.walk的用法</div>
     </a>
   
 </nav>

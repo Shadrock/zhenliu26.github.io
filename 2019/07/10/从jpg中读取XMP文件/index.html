@@ -3,26 +3,23 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>C#类中this的用法 | LAZY&#39;s BLOG</title>
+  <title>从jpg中读取XMP文件 | LAZY&#39;s BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="C#提高">
   
   
   
-  
-  <meta name="description" content="在类中this主要有两种用法，this表示在类中调用成员函数或者成员变量的类对象，为了区分调用成员函数还是成员变量，需要用到this，比如建一个Person的类，含成员变量 name，age，address；含成员函数talk(); 12345678class Person&amp;#123;    String name;    int age ;    String address；void talk">
-<meta name="keywords" content="C#提高">
+  <meta name="description" content="对于使用无人机的用户来说，如何导出xmp文件（从而获得pitch，roll，yaw三个角度）是很大的问题。大多用户在windows下编程，所以对于要在linux下安装的python-xmp-toolkit是无法实现的，在这里我采用了一种python+PIL库的方法。以下是相关代码： 1234567891011121314151617181920212223242526from PIL import">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C#类中this的用法">
-<meta property="og:url" content="http://yoursite.com/2019/07/09/-类中this的用法/index.html">
+<meta property="og:title" content="从jpg中读取XMP文件">
+<meta property="og:url" content="http://yoursite.com/2019/07/10/从jpg中读取XMP文件/index.html">
 <meta property="og:site_name" content="LAZY&#39;s BLOG">
-<meta property="og:description" content="在类中this主要有两种用法，this表示在类中调用成员函数或者成员变量的类对象，为了区分调用成员函数还是成员变量，需要用到this，比如建一个Person的类，含成员变量 name，age，address；含成员函数talk(); 12345678class Person&amp;#123;    String name;    int age ;    String address；void talk">
+<meta property="og:description" content="对于使用无人机的用户来说，如何导出xmp文件（从而获得pitch，roll，yaw三个角度）是很大的问题。大多用户在windows下编程，所以对于要在linux下安装的python-xmp-toolkit是无法实现的，在这里我采用了一种python+PIL库的方法。以下是相关代码： 1234567891011121314151617181920212223242526from PIL import">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-09T09:38:39.743Z">
+<meta property="og:updated_time" content="2019-07-10T14:12:05.244Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C#类中this的用法">
-<meta name="twitter:description" content="在类中this主要有两种用法，this表示在类中调用成员函数或者成员变量的类对象，为了区分调用成员函数还是成员变量，需要用到this，比如建一个Person的类，含成员变量 name，age，address；含成员函数talk(); 12345678class Person&amp;#123;    String name;    int age ;    String address；void talk">
+<meta name="twitter:title" content="从jpg中读取XMP文件">
+<meta name="twitter:description" content="对于使用无人机的用户来说，如何导出xmp文件（从而获得pitch，roll，yaw三个角度）是很大的问题。大多用户在windows下编程，所以对于要在linux下安装的python-xmp-toolkit是无法实现的，在这里我采用了一种python+PIL库的方法。以下是相关代码： 1234567891011121314151617181920212223242526from PIL import">
   
     <link rel="alternate" href="/atom.xml" title="LAZY&#39;s BLOG" type="application/atom+xml">
   
@@ -104,7 +101,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post--类中this的用法" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost">
+          <section id="main" style="float:none;"><article id="post-从jpg中读取XMP文件" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -112,7 +109,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      C#类中this的用法
+      从jpg中读取XMP文件
     </h1>
   
 
@@ -120,8 +117,8 @@
     
     <div class="article-meta">
       
-	<a href="/2019/07/09/-类中this的用法/" class="article-date">
-	  <time datetime="2019-07-09T09:30:00.000Z" itemprop="datePublished">July 9, 2019</time>
+	<a href="/2019/07/10/从jpg中读取XMP文件/" class="article-date">
+	  <time datetime="2019-07-10T14:04:57.000Z" itemprop="datePublished">July 10, 2019</time>
 	</a>
 
        
@@ -133,26 +130,16 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在类中this主要有两种用法，this表示在类中调用成员函数或者成员变量的类对象，为了区分调用成员函数还是成员变量，需要用到this，比如建一个Person的类，含成员变量 name，age，address；含成员函数talk();<br></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123;</span><br><span class="line">    String name;</span><br><span class="line">    int age ;</span><br><span class="line">    String address；</span><br><span class="line">void talk(String name)&#123;</span><br><span class="line">     System.out.println(&quot;my name is &quot;+this.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>对于使用无人机的用户来说，如何导出xmp文件（从而获得pitch，roll，yaw三个角度）是很大的问题。大多用户在windows下编程，所以对于要在linux下安装的python-xmp-toolkit是无法实现的，在这里我采用了一种<b>python+PIL库</b>的方法。<br><br>以下是相关代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">from PIL import Image</span><br><span class="line">import re</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line">def XMLextract(MyPath):</span><br><span class="line">    if MyPath==&quot;&quot;:</span><br><span class="line">        pass</span><br><span class="line">    else:</span><br><span class="line">        for root, dir, files in os.walk(MyPath):</span><br><span class="line">            for filename in files:</span><br><span class="line">                with Image.open(os.path.join(root,filename)) as im:</span><br><span class="line">                    for segment, content in im.applist:</span><br><span class="line">                        marker, body = content.split(b&apos;\x00&apos;, 1)</span><br><span class="line">                        if segment == &apos;APP1&apos; and marker == b&apos;http://ns.adobe.com/xap/1.0/&apos;:</span><br><span class="line">                            # parse the XML string with any method you like</span><br><span class="line">                            str1 = str(body, encoding=&quot;utf-8&quot;)</span><br><span class="line">                            p1 = re.compile(r&apos;[&lt;](.*?)[&gt;]&apos;, re.S)</span><br><span class="line">                            listXMP = re.findall(p1, str1)</span><br><span class="line">                            list1 = listXMP[3].split(&apos;\n&apos;)</span><br><span class="line">                            for itemdata in list1:</span><br><span class="line">                                list2 = itemdata.strip().split(&apos;=&apos;)</span><br><span class="line">                                print(list2[0] + &quot;: &quot; + list2[1][1:-1])</span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    fileName = &apos;E:/project314/Phobuild/qinghuamen/images2&apos;</span><br><span class="line">    XMLextract(fileName)</span><br></pre></td></tr></table></figure>
 
-<p>创建一个类对象并调用成员函数。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Person p1=new Person();</span><br><span class="line">p1.name=&quot;zhangsan&quot;</span><br><span class="line">p1.talk(&quot;lisi&quot;);</span><br></pre></td></tr></table></figure>
-
-<p>此时给name赋了两个值，一个给成员变量赋值zhangsan，一个是给成员函数的参数赋值lisi，这里就考虑成员函数输出中调用的是成员变量还是成员函数的参数，在使用this的情况下，结果为<br><code>my name is zhangsan</code><br>可以看到这里调用的是成员变量，而不带this的情况下，结果为<code>my name is lisi</code><br>可以看到这里调用的是成员函数的参数，因此使用this可以区分调用类成员变量和类成员函数中的参数，this代表调用成员函数的对象。</p>
-<p>this的另一种用法是在类内的一个构造函数中调用类内的另一个构造函数，比如类内有两个构造函数一个带有两个参数一个带有三个参数，可以在带有三个参数的构造函数里调用带有两个参数的构造函数，以实现对部分成员变量的赋值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Person(String name , int age)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">Person(String name,int age,String address)&#123;</span><br><span class="line">    this.Person(name，age)；</span><br><span class="line">    this.age=age；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这里在构造函数里的参数name，age，address与成员变量重名，由this的第一个用法可以知道，使用this.name可以表示调用类的成员变量，因此在带有三个参数的构造函数中的this.age=age表示把构造函数参数的值赋值给类的成员变量，若要在带有三个参数的构造函数中使用其中两个参数给成员变量赋值，这样可以也仅可在第一行调用含有两个参数的构造函数来减少重复赋值。</p>
+<p>利用到re正则表达式，文中<code>list2[0]</code>指条目，<code>list2[1]</code>指所对应的值，导出即为需要的相关结果。</p>
 
       
     </div>
     <footer class="entry-meta entry-footer">
       
       
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-提高/">C#提高</a></li></ul>
-
       
         
 	<div id="comment">
@@ -186,19 +173,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/07/10/从jpg中读取XMP文件/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          从jpg中读取XMP文件
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/07/09/thon列表，字典和元组/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/07/09/-类中this的用法/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">python列表，字典和元组</div>
+      <div class="article-nav-title">C#类中this的用法</div>
     </a>
   
 </nav>

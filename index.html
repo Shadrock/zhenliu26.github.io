@@ -99,6 +99,68 @@
         
           <section id="main">
   
+    <article id="post-ython编程小结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/10/07/ython编程小结/">Python编程小结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/10/07/ython编程小结/" class="article-date">
+	  <time datetime="2019-10-08T03:13:00.000Z" itemprop="datePublished">October 7, 2019</time>
+	</a>
+
+       
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h6 id="一维数组转变成二维数组"><a href="#一维数组转变成二维数组" class="headerlink" title="一维数组转变成二维数组"></a>一维数组转变成二维数组</h6><p>通过reshape( )函数即可实现，假设data是numpy.array类型的一维数组array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])，现将其转变为2行5列的二维数组，代码如下：<br><code>data.reshape((2,5))</code></p>
+<h6 id="多维数组转变成一维数组"><a href="#多维数组转变成一维数组" class="headerlink" title="多维数组转变成一维数组"></a>多维数组转变成一维数组</h6><p>将多维数组转换成一维数组的运算通常称为扁平化（flattening）或散开（raveling）,因此有两个函数可供选择。执行代码如下：</p>
+<p><code>data.ravel() # 不会产生源数据的副本
+data.flatten() # 总是返回数据的副本</code></p>
+<h6 id="逆转矩阵"><a href="#逆转矩阵" class="headerlink" title="逆转矩阵"></a>逆转矩阵</h6><p>将矩阵进行倒置</p>
+<p><code>reversed_arr = arr[::-1]</code></p>
+<h6 id="常用矩阵"><a href="#常用矩阵" class="headerlink" title="常用矩阵"></a>常用矩阵</h6><p><code>np.ones((3, 2))
+np.zeros((2, 3))
+np.eye(3)#3维单位矩阵
+y = np.array([4, 5, 6])
+np.diag(y)#以y为主对角线创建矩阵
+np.random.randint(0, 10, (4,3))</code></p>
+<h6 id="输出矩阵中出现的元素"><a href="#输出矩阵中出现的元素" class="headerlink" title="输出矩阵中出现的元素"></a>输出矩阵中出现的元素</h6><p><code>import numpy as np
+def unique(a):
+    a = np.sort(a)
+    b = np.diff(a)
+    b = np.r_[1, b]
+    return a[b != 0]</code></p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程总结/">编程总结</a></li></ul>
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-实用网站总结" class="article article-type-post" itemscope itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -492,7 +554,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/07/09/ython-os-walk的用法/">python os.walk的用法</a>
+      <a class="article-title" href="/2019/07/08/ython-os-walk的用法/">python os.walk的用法</a>
     </h1>
   
 
@@ -500,8 +562,8 @@
     
     <div class="article-meta">
       
-	<a href="/2019/07/09/ython-os-walk的用法/" class="article-date">
-	  <time datetime="2019-07-09T02:01:00.000Z" itemprop="datePublished">July 9, 2019</time>
+	<a href="/2019/07/08/ython-os-walk的用法/" class="article-date">
+	  <time datetime="2019-07-09T02:01:00.000Z" itemprop="datePublished">July 8, 2019</time>
 	</a>
 
        
@@ -624,60 +686,6 @@
 <!-- Table of Contents -->
 
   
-    <article id="post-OBJ，DLL，LIB，EXE之间的关系" class="article article-type-post" itemscope itemprop="blogPost">
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/07/04/OBJ，DLL，LIB，EXE之间的关系/">OBJ，DLL，LIB，EXE之间的关系</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2019/07/04/OBJ，DLL，LIB，EXE之间的关系/" class="article-date">
-	  <time datetime="2019-07-04T01:33:00.000Z" itemprop="datePublished">July 4, 2019</time>
-	</a>
-
-       
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
-<li>OBJ是中间代码文件、LIB是静态库文件、DLL是动态库文件、EXE是可执行文件。</li>
-<li>对于静态库文件，链接的时候把其中需要的东西抽取出来嵌入到EXE中，EXE较大。</li>
-<li>对于动态库文件，EXE执行的时候依赖于DLL提供的功能，没有DLL则EXE无法执行，EXE较小。</li>
-<li>一个C或CPP文件被编译后既是一个OBJ，当所有必须要的C或CPP都被编译成OBJ后再统一链接成EXE。</li>
-<li>LIB或DLL可以被看成是一堆OBJ的组合，发布后可以被链接入其它EXE或被其它EXE调用。</li>
-<li>LIB不可以调用其它LIB或DLL，DLL可以调用其它LIB或DLL。</li>
-<li>动态库有LIB文件和DLL文件。LIB文件必须在编译期就被链接到应用程序中，而DLL在运行期才会被调用。如果有DLL文件，则对应的LIB文件一般是一些索引信息，具体的实现在DLL文件中。如果只有LIB文件，那么这个LIB文件是静态库文件，索引和实现都在其中。静态库文件有好处，给用户安装时就不需要再挂动态库了；但也有缺点，即导致EXE较大且失去了动态库的灵活性，在版本升级时，同时要发布新的EXE才行。</li>
-<li>在动态库的情况下，有两个文件，一个是LIB文件、一个是DLL文件，LIB文件包含被DLL导出的函数的名称和位置，DLL包含实际的函数和数据，应用程序使用LIB文件链接到所需要使用的DLL文件，库中的函数和数据并不复制到可执行文件中，因此在EXE文件中存放的不是被调用的函数代码，而是DLL中所要调用的函数的内存地址，这样当一个或多个应用程序运行时再把程序代码和被调用的函数代码链接起来，从而节省了内存资源。</li>
-</ol>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程总结/">编程总结</a></li></ul>
-
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
 
 
   <nav id="page-nav">
@@ -788,6 +796,18 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2019/10/07/ython编程小结/">Python编程小结</a></h6>
+              <span>October 7, 2019</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2019/07/10/实用网站总结/">实用网站总结</a></h6>
               <span>July 10, 2019</span>
             </div>
@@ -842,18 +862,6 @@
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/07/09/thon列表，字典和元组/">python列表，字典和元组</a></h6>
-              <span>July 9, 2019</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -866,7 +874,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-提高/">C#提高</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/剪影/">剪影</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活感怀/">生活感怀</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编程总结/">编程总结</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/陈老师谈话/">陈老师谈话</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-提高/">C#提高</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/剪影/">剪影</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活感怀/">生活感怀</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编程总结/">编程总结</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/陈老师谈话/">陈老师谈话</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -886,7 +894,7 @@
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">5</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">5</span></li></ul>
     </div>
   </div>
 

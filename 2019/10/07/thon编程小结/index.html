@@ -11,18 +11,18 @@
   
   
   
-  <meta name="description" content="一维数组转变成二维数组通过reshape( )函数即可实现，假设data是numpy.array类型的一维数组array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])，现将其转变为2行5列的二维数组，代码如下：data.reshape((2,5)) 多维数组转变成一维数组将多维数组转换成一维数组的运算通常称为扁平化（flattening）或散开（raveling）,因此有两个函数">
+  <meta name="description" content="一维数组转变成二维数组通过reshape( )函数即可实现，假设data是numpy.array类型的一维数组array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])，现将其转变为2行5列的二维数组，代码如下： 1data.reshape((2,5))  多维数组转变成一维数组将多维数组转换成一维数组的运算通常称为扁平化（flattening）或散开（raveling）,因此有两">
 <meta name="keywords" content="编程总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python编程小结">
-<meta property="og:url" content="http://yoursite.com/2019/10/07/ython编程小结/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/10/07/thon编程小结/index.html">
 <meta property="og:site_name" content="LAZY&#39;s BLOG">
-<meta property="og:description" content="一维数组转变成二维数组通过reshape( )函数即可实现，假设data是numpy.array类型的一维数组array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])，现将其转变为2行5列的二维数组，代码如下：data.reshape((2,5)) 多维数组转变成一维数组将多维数组转换成一维数组的运算通常称为扁平化（flattening）或散开（raveling）,因此有两个函数">
+<meta property="og:description" content="一维数组转变成二维数组通过reshape( )函数即可实现，假设data是numpy.array类型的一维数组array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])，现将其转变为2行5列的二维数组，代码如下： 1data.reshape((2,5))  多维数组转变成一维数组将多维数组转换成一维数组的运算通常称为扁平化（flattening）或散开（raveling）,因此有两">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-08T03:23:20.820Z">
+<meta property="og:updated_time" content="2019-10-08T03:27:34.702Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python编程小结">
-<meta name="twitter:description" content="一维数组转变成二维数组通过reshape( )函数即可实现，假设data是numpy.array类型的一维数组array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])，现将其转变为2行5列的二维数组，代码如下：data.reshape((2,5)) 多维数组转变成一维数组将多维数组转换成一维数组的运算通常称为扁平化（flattening）或散开（raveling）,因此有两个函数">
+<meta name="twitter:description" content="一维数组转变成二维数组通过reshape( )函数即可实现，假设data是numpy.array类型的一维数组array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])，现将其转变为2行5列的二维数组，代码如下： 1data.reshape((2,5))  多维数组转变成一维数组将多维数组转换成一维数组的运算通常称为扁平化（flattening）或散开（raveling）,因此有两">
   
     <link rel="alternate" href="/atom.xml" title="LAZY&#39;s BLOG" type="application/atom+xml">
   
@@ -104,7 +104,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-ython编程小结" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost">
+          <section id="main" style="float:none;"><article id="post-thon编程小结" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -120,7 +120,7 @@
     
     <div class="article-meta">
       
-	<a href="/2019/10/07/ython编程小结/" class="article-date">
+	<a href="/2019/10/07/thon编程小结/" class="article-date">
 	  <time datetime="2019-10-08T03:13:00.000Z" itemprop="datePublished">October 7, 2019</time>
 	</a>
 
@@ -133,25 +133,20 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h6 id="一维数组转变成二维数组"><a href="#一维数组转变成二维数组" class="headerlink" title="一维数组转变成二维数组"></a>一维数组转变成二维数组</h6><p>通过reshape( )函数即可实现，假设data是numpy.array类型的一维数组array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])，现将其转变为2行5列的二维数组，代码如下：<br><code>data.reshape((2,5))</code></p>
-<h6 id="多维数组转变成一维数组"><a href="#多维数组转变成一维数组" class="headerlink" title="多维数组转变成一维数组"></a>多维数组转变成一维数组</h6><p>将多维数组转换成一维数组的运算通常称为扁平化（flattening）或散开（raveling）,因此有两个函数可供选择。执行代码如下：</p>
-<p><code>data.ravel() # 不会产生源数据的副本
-data.flatten() # 总是返回数据的副本</code></p>
-<h6 id="逆转矩阵"><a href="#逆转矩阵" class="headerlink" title="逆转矩阵"></a>逆转矩阵</h6><p>将矩阵进行倒置</p>
-<p><code>reversed_arr = arr[::-1]</code></p>
-<h6 id="常用矩阵"><a href="#常用矩阵" class="headerlink" title="常用矩阵"></a>常用矩阵</h6><p><code>np.ones((3, 2))
-np.zeros((2, 3))
-np.eye(3)#3维单位矩阵
-y = np.array([4, 5, 6])
-np.diag(y)#以y为主对角线创建矩阵
-np.random.randint(0, 10, (4,3))</code></p>
-<h6 id="输出矩阵中出现的元素"><a href="#输出矩阵中出现的元素" class="headerlink" title="输出矩阵中出现的元素"></a>输出矩阵中出现的元素</h6><p><code>import numpy as np
-def unique(a):
-    a = np.sort(a)
-    b = np.diff(a)
-    b = np.r_[1, b]
-    return a[b != 0]</code></p>
+        <h5 id="一维数组转变成二维数组"><a href="#一维数组转变成二维数组" class="headerlink" title="一维数组转变成二维数组"></a>一维数组转变成二维数组</h5><p>通过reshape( )函数即可实现，假设data是numpy.array类型的一维数组array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])，现将其转变为2行5列的二维数组，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data.reshape((2,5))</span><br></pre></td></tr></table></figure>
 
+<h5 id="多维数组转变成一维数组"><a href="#多维数组转变成一维数组" class="headerlink" title="多维数组转变成一维数组"></a>多维数组转变成一维数组</h5><p>将多维数组转换成一维数组的运算通常称为扁平化（flattening）或散开（raveling）,因此有两个函数可供选择。执行代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">data.ravel() # 不会产生源数据的副本</span><br><span class="line">data.flatten() # 总是返回数据的副本</span><br></pre></td></tr></table></figure>
+
+<h5 id="逆转矩阵"><a href="#逆转矩阵" class="headerlink" title="逆转矩阵"></a>逆转矩阵</h5><p>将矩阵进行倒置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reversed_arr = arr[::-1]</span><br></pre></td></tr></table></figure>
+
+<h5 id="常用矩阵"><a href="#常用矩阵" class="headerlink" title="常用矩阵"></a>常用矩阵</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">np.ones((3, 2))</span><br><span class="line">np.zeros((2, 3))</span><br><span class="line">np.eye(3)#3维单位矩阵</span><br><span class="line">y = np.array([4, 5, 6])</span><br><span class="line">np.diag(y)#以y为主对角线创建矩阵</span><br><span class="line">np.random.randint(0, 10, (4,3))</span><br></pre></td></tr></table></figure>
+
+<h5 id="输出矩阵中出现的元素"><a href="#输出矩阵中出现的元素" class="headerlink" title="输出矩阵中出现的元素"></a>输出矩阵中出现的元素</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">def unique(a):</span><br><span class="line">    a = np.sort(a)</span><br><span class="line">    b = np.diff(a)</span><br><span class="line">    b = np.r_[1, b]</span><br><span class="line">    return a[b != 0]</span><br></pre></td></tr></table></figure>
+
+<h5 id="生成random"><a href="#生成random" class="headerlink" title="生成random"></a>生成random</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line">print( random.randint(1,10) )        # 产生 1 到 10 的一个整数型随机数  </span><br><span class="line">print( random.random() )             # 产生 0 到 1 之间的随机浮点数</span><br><span class="line">print( random.uniform(1.1,5.4) )     # 产生  1.1 到 5.4 之间的随机浮点数，区间可以不是整数</span><br><span class="line">print( random.choice(&apos;tomorrow&apos;) )   # 从序列中随机选取一个元素</span><br><span class="line">print( random.randrange(1,100,2) )   # 生成从1到100的间隔为2的随机整数</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -210,7 +205,7 @@ def unique(a):
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#一维数组转变成二维数组"><span class="nav-number">1.</span> <span class="nav-text">一维数组转变成二维数组</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#多维数组转变成一维数组"><span class="nav-number">2.</span> <span class="nav-text">多维数组转变成一维数组</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#逆转矩阵"><span class="nav-number">3.</span> <span class="nav-text">逆转矩阵</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#常用矩阵"><span class="nav-number">4.</span> <span class="nav-text">常用矩阵</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#输出矩阵中出现的元素"><span class="nav-number">5.</span> <span class="nav-text">输出矩阵中出现的元素</span></a></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#一维数组转变成二维数组"><span class="nav-number">1.</span> <span class="nav-text">一维数组转变成二维数组</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#多维数组转变成一维数组"><span class="nav-number">2.</span> <span class="nav-text">多维数组转变成一维数组</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#逆转矩阵"><span class="nav-number">3.</span> <span class="nav-text">逆转矩阵</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#常用矩阵"><span class="nav-number">4.</span> <span class="nav-text">常用矩阵</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#输出矩阵中出现的元素"><span class="nav-number">5.</span> <span class="nav-text">输出矩阵中出现的元素</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#生成random"><span class="nav-number">6.</span> <span class="nav-text">生成random</span></a></li></ol>
     
     </div>
   </aside>

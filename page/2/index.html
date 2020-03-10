@@ -99,6 +99,54 @@
         
           <section id="main">
   
+    <article id="post-ython-os-walk的用法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/07/08/ython-os-walk的用法/">python os.walk的用法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/07/08/ython-os-walk的用法/" class="article-date">
+	  <time datetime="2019-07-09T02:01:00.000Z" itemprop="datePublished">July 8, 2019</time>
+	</a>
+
+       
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><b>概述</b><br><br>os.walk() 方法用于通过在目录树中游走输出在目录中的文件名，向上或者向下。<br><br>os.walk() 方法是一个简单易用的文件、目录遍历器，可以帮助我们高效的处理文件、目录方面的事情。<br><br>在Unix，Windows中有效。<br><br><b>语法</b><br><br>walk()方法语法格式如下：<br><br>os.walk(top[, topdown=True[, onerror=None[, followlinks=False]]])<br><br><b>参数</b><br><br>top – 是你所要遍历的目录的地址, 返回的是一个三元组(root,dirs,files)。<br><br>root 所指的是当前正在遍历的这个文件夹的本身的地址<br><br>dirs 是一个 list ，内容是该文件夹中所有的目录的名字(不包括子目录)<br><br>files 同样是 list , 内容是该文件夹中所有的文件(不包括子目录)<br><br>topdown –可选，为 True，则优先遍历 top 目录，否则优先遍历 top 的子目录(默认为开启)。如果 topdown 参数为 True，walk 会遍历top文件夹，与top 文件夹中每一个子目录。<br><br>onerror – 可选，需要一个 callable 对象，当 walk 需要异常时，会调用。<br><br>followlinks – 可选，如果为 True，则会遍历目录下的快捷方式(linux 下是软连接 symbolic link )实际所指的目录(默认关闭)，如果为 False，则优先遍历 top 的子目录。<br><br><b>返回值</b><br><br>该方法没有返回值。<br><br><b>实例</b><br><br>以下实例演示了 walk() 方法的使用：<br></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python</span><br><span class="line"># -*- coding: UTF-8 -*-</span><br><span class="line"></span><br><span class="line">import os</span><br><span class="line">for root, dirs, files in os.walk(&quot;.&quot;, topdown=False):</span><br><span class="line">    for name in files:</span><br><span class="line">        print(os.path.join(root, name))</span><br><span class="line">    for name in dirs:</span><br><span class="line">        print(os.path.join(root, name))</span><br></pre></td></tr></table></figure>
+
+<p>执行以上程序输出结果为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">./.bash_logout</span><br><span class="line">./amrood.tar.gz</span><br><span class="line">./.emacs</span><br><span class="line">./httpd.conf</span><br><span class="line">./www.tar.gz</span><br><span class="line">./mysql.tar.gz</span><br><span class="line">./test.py</span><br><span class="line">./.bashrc</span><br><span class="line">./.bash_history</span><br><span class="line">./.bash_profile</span><br><span class="line">./tmp</span><br><span class="line">./tmp/test.py</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程总结/">编程总结</a></li></ul>
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-ListView-QListWidget的区别" class="article article-type-post" itemscope itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -598,80 +646,6 @@
 <!-- Table of Contents -->
 
   
-    <article id="post-毕业晚会有感" class="article article-type-post" itemscope itemprop="blogPost">
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/06/11/毕业晚会有感/">毕业晚会有感</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2019/06/11/毕业晚会有感/" class="article-date">
-	  <time datetime="2019-06-11T14:56:00.000Z" itemprop="datePublished">June 11, 2019</time>
-	</a>
-
-       
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>其实，本来也没有想过去弄一个节目，只是想趁着大学结束的时候，去好好的给自己一次尝试和一次锻炼。</p>
-<p>事情是这样的（长话短说）：有一天洗澡的时候，唱起了《合照》，心想弄一次合唱，给大家大学一个完美的句点。然后就弄了。</p>
-<p>选了很多很支持我的人，也相信我们能完成一个美好的秀。</p>
-<p>其实困难有很多，也不算很多。现在过去了，真的就像一个体验——借教室，教唱歌，选走位，租衣服，集合大家…</p>
-<p>本来的歌也改了又改，最后选了房间和we will rock you。但真的，很感谢这个班级给了我一次尝试，也让我有不同的体验（以前的我可能就躲在后面，说，大家可以我就可以）这可能也是我在大学的一个成长。</p>
-<p>我们有过大雨倾盆时，来202艰苦训练；也有在烈日下，在信操拍视频。</p>
-<p>最后结果也超棒，当我们演出完喊出victory，当我们一起快乐的在门口合影，当我们…</p>
-<p>虽然我们这个班，算是缘分相遇，中间稍有疏离，但还是能让人感受那种久违的归属感。</p>
-<p>真的很感谢各位，真的很感谢那些为这些节目贡献的每一个人，希望这也能成为你们美好的回忆。</p>
-<p>房间的歌词真的细看会哭，”在这温暖的房间，我于是慢慢发现，相聚其实是一种缘，多值得纪念“</p>
-<p>百度云链接列表（福利放送时间哈哈哈哈）：</p>
-<ol>
-<li>1504合唱1.0（中间有一段画面停了，但声音有）：链接：<a href="https://pan.baidu.com/s/1OVNU_3tjCdaja874DDy13g" target="_blank" rel="noopener">https://pan.baidu.com/s/1OVNU_3tjCdaja874DDy13g</a> 提取码：fgly 复制这段内容后打开百度网盘手机App，操作更方便哦</li>
-<li>1504合唱2.0（手录的，感觉还可以，还有3.0的哈哈哈）：链接：<a href="https://pan.baidu.com/s/1OqSDxX-P3WvsY68qyY137w" target="_blank" rel="noopener">https://pan.baidu.com/s/1OqSDxX-P3WvsY68qyY137w</a> 提取码：oimj 复制这段内容后打开百度网盘手机App，操作更方便哦</li>
-<li>创造101后半段（只有后半段凑活看吧）：链接：<a href="https://pan.baidu.com/s/1OqSDxX-P3WvsY68qyY137w" target="_blank" rel="noopener">https://pan.baidu.com/s/1OqSDxX-P3WvsY68qyY137w</a> 提取码：oimj 复制这段内容后打开百度网盘手机App，操作更方便哦</li>
-<li>创造101lazy直拍（哈哈哈真的感谢萌萌了，前面也是他录的）：链接：<a href="https://pan.baidu.com/s/1u04mX3wGCQI2zxqu9L_zbg" target="_blank" rel="noopener">https://pan.baidu.com/s/1u04mX3wGCQI2zxqu9L_zbg</a> 提取码：yj8z 复制这段内容后打开百度网盘手机App，操作更方便哦</li>
-<li>四班合唱背景视频（就是BGM+超有诚意的视频）：链接：<a href="https://pan.baidu.com/s/1f8pzFp1M8KHVx8LA0-RVPA" target="_blank" rel="noopener">https://pan.baidu.com/s/1f8pzFp1M8KHVx8LA0-RVPA</a> 提取码：y8kt 复制这段内容后打开百度网盘手机App，操作更方便哦</li>
-</ol>
-<p>关于跳舞，哈哈哈哈，其实我早就想跳了，甚至想找舞协的学妹，问他们有没有节目。所以一听到水皮他们班有节目就厚着脸皮去了，2班的人都超好哈哈哈哈。</p>
-<p>由于晚去了一节课的我，就努力学习，争取跟上他们。</p>
-<p>哈哈哈还记得每天晚上练完之后还会自己再多练几遍，也希望能尽善尽美吧（当时好像还要答辩哈哈哈哈）</p>
-<p>真的，最后我觉得没有对不起自己的努力，动作没错！！！（大家可以看视频，每个都踩了点哈哈哈哈）</p>
-<p>或许，我可以往唱跳型歌手发展？？？哈哈哈哈</p>
-<p>关于离别，最后当大家大合影的时候，我坐在台下，看着他们。觉得，快乐的结束都是映衬着相反的感受。</p>
-<p>我习惯了大家在校园里想见就见，习惯了为学习和出去玩而去烦恼，习惯了现在的每一次尝试都是新鲜而有趣。</p>
-<p>所以，我不知道如何和大家再见，不想刻意让这件事成为一个仪式，也不想让自己有遗憾。</p>
-<p>那些关心我，在意我，帮助我的人，我真的想，如果可以，我能写一封长长的信，去感谢你们在我人生中的意义。</p>
-<p>哈哈哈哈，我经常和别人说，我仪式感很重，可能只是对想让自己在每一个阶段，可以和每个人有一个完美的记忆节点。</p>
-<p>哈哈哈哈，人一闲下来就会多想，忙的时候，想睡就睡，哪有闲工夫想这些。</p>
-<p>最后，祝大家毕业快乐，活出自己想要生活的样子！！！</p>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活感怀/">生活感怀</a></li></ul>
-
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
 
 
   <nav id="page-nav">
@@ -782,6 +756,18 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2020/03/09/影作品/">摄影作品</a></h6>
+              <span>March 9, 2020</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2020/01/01/业小感/">交作业小感</a></h6>
               <span>January 1, 2020</span>
             </div>
@@ -836,18 +822,6 @@
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/07/10/于Python中的lambda的一些解析/">关于Python中的lambda的一些解析</a></h6>
-              <span>July 10, 2019</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -860,7 +834,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-提高/">C#提高</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/剪影/">剪影</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活感怀/">生活感怀</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编程总结/">编程总结</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/陈老师谈话/">陈老师谈话</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-提高/">C#提高</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/剪影/">剪影</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活感怀/">生活感怀</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编程总结/">编程总结</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/陈老师谈话/">陈老师谈话</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -870,7 +844,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/C-提高/" style="font-size: 10px;">C#提高</a> <a href="/tags/剪影/" style="font-size: 10px;">剪影</a> <a href="/tags/生活感怀/" style="font-size: 16.67px;">生活感怀</a> <a href="/tags/编程总结/" style="font-size: 20px;">编程总结</a> <a href="/tags/陈老师谈话/" style="font-size: 13.33px;">陈老师谈话</a> <a href="/tags/随笔/" style="font-size: 13.33px;">随笔</a>
+      <a href="/tags/C-提高/" style="font-size: 10px;">C#提高</a> <a href="/tags/剪影/" style="font-size: 13.33px;">剪影</a> <a href="/tags/生活感怀/" style="font-size: 16.67px;">生活感怀</a> <a href="/tags/编程总结/" style="font-size: 20px;">编程总结</a> <a href="/tags/陈老师谈话/" style="font-size: 13.33px;">陈老师谈话</a> <a href="/tags/随笔/" style="font-size: 13.33px;">随笔</a>
     </div>
   </div>
 
@@ -880,7 +854,7 @@
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">5</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">5</span></li></ul>
     </div>
   </div>
 

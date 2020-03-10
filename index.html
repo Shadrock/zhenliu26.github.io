@@ -99,6 +99,53 @@
         
           <section id="main">
   
+    <article id="post-影作品" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/03/09/影作品/">摄影作品</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/03/09/影作品/" class="article-date">
+	  <time datetime="2020-03-10T02:38:00.000Z" itemprop="datePublished">March 9, 2020</time>
+	</a>
+
+       
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://raw.githubusercontent.com/zhenliu26/Images/master/mmexport1577854476269.jpg" alt="克拉克大学"></p>
+<p><img src="https://raw.githubusercontent.com/zhenliu26/Images/master/MVIMG_20200305_162001-01.jpg" alt="瓦尔登湖"></p>
+<p><img src="https://raw.githubusercontent.com/zhenliu26/Images/master/MVIMG_20191225_114047-01.jpg" alt="布鲁克林大桥"></p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/剪影/">剪影</a></li></ul>
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-业小感" class="article article-type-post" itemscope itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -658,54 +705,6 @@
 <!-- Table of Contents -->
 
   
-    <article id="post-ython-os-walk的用法" class="article article-type-post" itemscope itemprop="blogPost">
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/07/08/ython-os-walk的用法/">python os.walk的用法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2019/07/08/ython-os-walk的用法/" class="article-date">
-	  <time datetime="2019-07-09T02:01:00.000Z" itemprop="datePublished">July 8, 2019</time>
-	</a>
-
-       
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><b>概述</b><br><br>os.walk() 方法用于通过在目录树中游走输出在目录中的文件名，向上或者向下。<br><br>os.walk() 方法是一个简单易用的文件、目录遍历器，可以帮助我们高效的处理文件、目录方面的事情。<br><br>在Unix，Windows中有效。<br><br><b>语法</b><br><br>walk()方法语法格式如下：<br><br>os.walk(top[, topdown=True[, onerror=None[, followlinks=False]]])<br><br><b>参数</b><br><br>top – 是你所要遍历的目录的地址, 返回的是一个三元组(root,dirs,files)。<br><br>root 所指的是当前正在遍历的这个文件夹的本身的地址<br><br>dirs 是一个 list ，内容是该文件夹中所有的目录的名字(不包括子目录)<br><br>files 同样是 list , 内容是该文件夹中所有的文件(不包括子目录)<br><br>topdown –可选，为 True，则优先遍历 top 目录，否则优先遍历 top 的子目录(默认为开启)。如果 topdown 参数为 True，walk 会遍历top文件夹，与top 文件夹中每一个子目录。<br><br>onerror – 可选，需要一个 callable 对象，当 walk 需要异常时，会调用。<br><br>followlinks – 可选，如果为 True，则会遍历目录下的快捷方式(linux 下是软连接 symbolic link )实际所指的目录(默认关闭)，如果为 False，则优先遍历 top 的子目录。<br><br><b>返回值</b><br><br>该方法没有返回值。<br><br><b>实例</b><br><br>以下实例演示了 walk() 方法的使用：<br></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python</span><br><span class="line"># -*- coding: UTF-8 -*-</span><br><span class="line"></span><br><span class="line">import os</span><br><span class="line">for root, dirs, files in os.walk(&quot;.&quot;, topdown=False):</span><br><span class="line">    for name in files:</span><br><span class="line">        print(os.path.join(root, name))</span><br><span class="line">    for name in dirs:</span><br><span class="line">        print(os.path.join(root, name))</span><br></pre></td></tr></table></figure>
-
-<p>执行以上程序输出结果为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">./.bash_logout</span><br><span class="line">./amrood.tar.gz</span><br><span class="line">./.emacs</span><br><span class="line">./httpd.conf</span><br><span class="line">./www.tar.gz</span><br><span class="line">./mysql.tar.gz</span><br><span class="line">./test.py</span><br><span class="line">./.bashrc</span><br><span class="line">./.bash_history</span><br><span class="line">./.bash_profile</span><br><span class="line">./tmp</span><br><span class="line">./tmp/test.py</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程总结/">编程总结</a></li></ul>
-
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
 
 
   <nav id="page-nav">
@@ -816,6 +815,18 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2020/03/09/影作品/">摄影作品</a></h6>
+              <span>March 9, 2020</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2020/01/01/业小感/">交作业小感</a></h6>
               <span>January 1, 2020</span>
             </div>
@@ -870,18 +881,6 @@
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/07/10/于Python中的lambda的一些解析/">关于Python中的lambda的一些解析</a></h6>
-              <span>July 10, 2019</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -894,7 +893,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-提高/">C#提高</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/剪影/">剪影</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活感怀/">生活感怀</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编程总结/">编程总结</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/陈老师谈话/">陈老师谈话</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-提高/">C#提高</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/剪影/">剪影</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活感怀/">生活感怀</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编程总结/">编程总结</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/陈老师谈话/">陈老师谈话</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -904,7 +903,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/C-提高/" style="font-size: 10px;">C#提高</a> <a href="/tags/剪影/" style="font-size: 10px;">剪影</a> <a href="/tags/生活感怀/" style="font-size: 16.67px;">生活感怀</a> <a href="/tags/编程总结/" style="font-size: 20px;">编程总结</a> <a href="/tags/陈老师谈话/" style="font-size: 13.33px;">陈老师谈话</a> <a href="/tags/随笔/" style="font-size: 13.33px;">随笔</a>
+      <a href="/tags/C-提高/" style="font-size: 10px;">C#提高</a> <a href="/tags/剪影/" style="font-size: 13.33px;">剪影</a> <a href="/tags/生活感怀/" style="font-size: 16.67px;">生活感怀</a> <a href="/tags/编程总结/" style="font-size: 20px;">编程总结</a> <a href="/tags/陈老师谈话/" style="font-size: 13.33px;">陈老师谈话</a> <a href="/tags/随笔/" style="font-size: 13.33px;">随笔</a>
     </div>
   </div>
 
@@ -914,7 +913,7 @@
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">5</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">5</span></li></ul>
     </div>
   </div>
 

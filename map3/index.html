@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Studio Week 3</title>
+   <!-- Add Mapbox GL JS JavaScript file -->
+   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+   <!-- Add in the Mapbox GL JS CSS file -->
+   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+  
+   <!-- Add CSS styling info for the map -->
+  
+  <style>
+  #mapIndex{
+    height: 100%;
+    width: 100%;
+}
+  #mapId {
+      position: absolute;
+      height: 600px;
+      width: 800px;
+      overflow: hidden;
+    }
+  .map-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+  margin-right: 20px;
+  font-family: Arial, sans-serif;
+  overflow: auto;
+  border-radius: 3px;
+}
+
+/**
+* Create a position for the map
+* on the page */
+
+
+/**
+* Set rules for how the map overlays
+* (information box and legend) will be displayed
+* on the page. */
+h2,
+h3 {
+  margin: 10px;
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+p {
+  font-size: 0.85em;
+  margin: 10px;
+  text-align: left;
+}
+
+#features {
+  top: 0;
+  height: 100px;
+  margin-top: 20px;
+  width: 250px;
+}
+
+#legend {
+  padding: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  line-height: 18px;
+  height: 150px;
+  margin-bottom: 40px;
+  width: 100px;
+}
+
+.legend-key {
+  display: inline-block;
+  border-radius: 20%;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+
+  </style>
+  <!-- Adding styling info for page layout by reading in a CSS file -->
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <h1>Studio Week 3 <br> Choropleth Map with Mapbox </h1>
+  <!-- Add multiple pages to web page-->
+  <!-- active class displays the grey box around current page-->
+  <ul>
+  	<li><a class="active" href="index.html" target="_self">Output 1</a></li>
+    <li><a href="mapbox-interaction.html" target="_self">Output 2</a></li>
+    <li><a href="mapbox-turfjs.html" target="_self">Output 3</a></li>
+  </ul>
+  <br>
+  <div align="center">
+  <iframe id="custom-frame" src="US_pop_density_map.html" width="800" height="600" scrolling="no" frameBorder="0"></iframe>
+  <h3>This is a population density map in USA. When you put the mouth on the state, the population density of this state will be shown on the top left</h3>
+  <br>
+  <iframe id="custom-frame" src="Map Client.html" width="800" height="600" scrolling="no" frameBorder="0"></iframe>
+  <h3>This is a map that shows the route from Strand Agriculture Hall to Wikinson hall in Oregon State University Historic District. This map is created by Leaflet. </h3>
+  <br>
+</div>
+  <!-- Add a div to give the map somewhere to go -->
+  <!-- <div id='mapId'></div>
+  <div class='map-overlay' id='features'><h2>US population density</h2><div id='pd'><p>Hover over a state!</p></div></div>
+  <div class='map-overlay' id='legend'></div>
+  
+
+
+  <script>
+    // Add your access token
+    mapboxgl.accessToken = "pk.eyJ1IjoiemhlbmxpdTI2IiwiYSI6ImNrM3lpdmpvMjAwcnEza2xqbWx5Y2VrMXQifQ.RXvOrt1Ych69rCXSAuljBg";
+
+    /* The map variable stores a new mapbox gl map.
+    * map's center set to [-122.467, 37.798] with zoom 13. 
+    * Set the style URL to your custom style
+    * Update the style with your custom style's Style URL.
+    * See the Style URL'S reference for more info: https://docs.mapbox.com/help/glossary/style-url/
+    */
+    var map = new mapboxgl.Map({
+    center: [-95.7129,37.0902],
+    zoom: 3,
+    style: "mapbox://styles/zhenliu26/ck8rt73uh0elo1jo58aif1cjn",
+    container: "mapId"
+    });
+
+    map.on('load', function() {
+      var layers = ['0-10', '10-20', '20-50', '50-100', '100-200', '200-500', '500-1000', '1000+'];
+      var colors = ['#FFEDA0', '#FED976', '#FEB24C', '#FD8D3C', '#FC4E2A', '#E31A1C', '#BD0026', '#800026'];
+      for (i = 0; i < layers.length; i++) {
+        var layer = layers[i];
+        var color = colors[i];
+        var item = document.createElement('div');
+        var key = document.createElement('span');
+        key.className = 'legend-key';
+        key.style.backgroundColor = color;
+        var value = document.createElement('span');
+        value.innerHTML = layer;
+        item.appendChild(key);
+        item.appendChild(value);
+        legend.appendChild(item);
+        }
+    }); -->
+
+
+  </script>
+</body>
+
+</html>

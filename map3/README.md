@@ -1,9 +1,12 @@
 # Zhen Liu webmap #3!
 The website contains 3 parts:
 ## 1. Choropleth Map with Mapbox and Otehr maps with Leaflet
-The first map is about the populalation density in USA. When you put the mouse on the state, the population density of this state will be shown on the top right.<br>
-The second map shows the route from Strand Agriculture Hall to Wikinson hall in Oregon State University Historic District. This map is created by Leaflet.<br>
+The first map is about the populalation density in USA. When you put the mouse on the state, the population density of this state will be shown on the top right.
+
+The second map shows the route from Strand Agriculture Hall to Wikinson hall in Oregon State University Historic District. This map is created by Leaflet.
+
 The third map shows the Universities in Boston. User can click the campus icon to get the information of the college. Also, the heatmap is shown on the map. And, the user can add bike lanes on the map in the top right layer group button. This map is created by Leaflet.
+
 ## 2. Interactions with Mapbox GL JS
 This map provides some functions:
 
